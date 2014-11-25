@@ -1,0 +1,52 @@
+<template name="funcionarioDetail">
+  <div class="container">
+
+{{#with funcionario}}
+
+    <h2>Detalhes do funcionário</h2>
+    <table class="table-bordered table-striped">
+      <tbody>
+        <tr>
+          <th class="col-md-3">Criado em</th>
+          <td class="col-md-9">{{createdAt}}</td>
+        </tr>
+        <tr>
+          <th class="col-md-3">Editado em</th>
+          <td class="col-md-9">{{updatedAt}}</td>
+        </tr>
+        
+          <tr>
+            <th class="col-md-3">Nome</th>
+            <td class="col-md-9">{{nome}}</td>
+          </tr>
+        
+          <tr>
+            <th class="col-md-3">Cargo</th>
+            <td class="col-md-9">{{ cargo}}</td>
+          </tr>
+        
+          <tr>
+            <th class="col-md-3">Cpf</th>
+            <td class="col-md-9">{{ cpf}}</td>
+          </tr>
+          <tr>
+            <th class="col-md-3">Dependentes</th>
+          
+          <td class="col-md-9">
+            {{#each dependentes}}
+             [{{ nome}}] 
+            {{/each}}
+            </td>
+         </tr>          
+      </tbody>
+    </table>
+    <hr>
+    <button type="button" class="btn btn-default edit-funcionario">Editar Funcionário</button>
+    <button type="button" class="btn btn-default list-funcionario">Listar Funcionários</button>
+    <button type="button" class="btn btn-default incluir-dependente">Incluir dependente</button>
+    <button type="button" class="btn btn-default list-dependente-funcionario">Listar dependentes do funcionário</button>
+    {{else}}
+      <h3>Não há funcionário com esse ID.</h3>
+    {{/with}}
+  </div>
+</template>

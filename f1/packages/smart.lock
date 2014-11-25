@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "mask": {}
+    },
+    "packages": {
+      "mask": {
+        "git": "https://github.com/andrewreedy/meteor-mask.git",
+        "tag": "v0.0.1",
+        "commit": "f9d765cb50b79c86e8a7d706636e4ced616af824"
+      }
+    }
+  }
+}

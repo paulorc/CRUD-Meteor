@@ -1,0 +1,37 @@
+<template name="dependenteNew">
+    <div class="container">
+      {{#with funcionario}}
+    <h2>Novo dependente</h2>
+      <form class="form-horizontal" role="form">
+        
+            <div class="form-group">
+              <label for="inputnome" class="col-sm-2 control-label">Nome do dependente</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="nome" id="inputNome" placeholder="Nome do dependente">
+              </div>
+            </div>  
+
+            <div class="form-group">
+              <label for="inputnome" class="col-sm-2 control-label">Cpf</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="cpf" id="inputCpf" placeholder="Cpf do dependente" data-vm-mask-cpf>
+              </div>
+            </div>  
+            
+            <div class="form-group">
+              <label for="inputdataNasc" class="col-sm-2 control-label">Data de nascimento</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="dataNasc" id="inputdataNasc" placeholder="Data de nascimento" data-vm-mask-date>
+              </div>
+            </div>  
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Criar Dependente</button>
+            <button class="btn btn-default cancel">Cancelar</button>
+          </div>
+        </div>
+      </form>
+      {{/with}}
+    </div>
+</template>

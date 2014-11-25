@@ -1,0 +1,48 @@
+<template name="funcionarioEdit">
+    <div class="container">
+   {{#with funcionario}}
+    <h2>Editar funcionario</h2>
+      <form class="form-horizontal" role="form">
+
+            <div class="form-group">
+
+              <label for="inputnome" class="col-sm-2 control-label">Nome</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="nome" id="inputnome" value="{{nome}}">
+              </div>
+            </div>
+        
+            <div class="form-group">
+
+              <label for="inputcargo" class="col-sm-2 control-label">Cargo</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="cargo" id="inputcargo" value="{{cargo}}">
+              </div>
+            </div>
+        
+            <div class="form-group">
+
+              <label for="inputcpf" class="col-sm-2 control-label">Cpf</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="cpf" id="inputcpf" value="{{cpf}}" data-vm-mask-cpf>
+              </div>
+            </div>
+        
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Salvar funcionário</button>
+            <button class="btn btn-default cancel">Cancelar</button>
+          </div>
+      </div>
+      </form>
+  {{else}}
+        <div class="form-group">
+          <h3>Não há funcionário com esse ID.</h3>
+          <hr>
+          <button class="btn btn-default cancel">Voltar para lista de funcionários</button>
+        </div>
+ {{/with}}
+      
+    </div>
+</template>

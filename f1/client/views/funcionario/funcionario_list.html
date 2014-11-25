@@ -1,0 +1,40 @@
+<template name="funcionariosList">
+  <div class="container">
+    <h2>Lista de funcionários</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          
+            <th>Nome</th>
+          
+            <th>Cargo</th>
+          
+            <th>Cpf</th>
+          
+          <th>Detalhes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each funcionarios}}
+          {{> funcionarioDados}}
+        {{/each}}
+      </tbody>
+    </table>
+    <button class="btn btn-default new">Novo</button>
+  </div>
+</template>
+
+<template name="funcionarioDados">
+  <tr>
+    
+      <td>{{nome}}</td>
+    
+      <td>{{ cargo}}</td>
+    
+      <td>{{ cpf}}</td>
+    
+    <td><a href="{{pathFor "funcionarioDetail"}}">Ver</a></td>
+    <td><a href="#" class="deletar">Deletar</a></td> 
+    <td><a href="#" class="editar">Editar</a></td>
+  </tr>
+</template>

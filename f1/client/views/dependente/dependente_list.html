@@ -1,0 +1,32 @@
+<template name="dependentesList">
+  <div class="container">
+    {{#with funcionario}}
+    <h2>Dependentes do funcionário <i style="color:blue" >{{nome}}</i></h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+            <th>Nome do dependente</th>  
+            <th>cpf</th>  
+            <th>Data de nascimento</th>  
+        </tr>
+      </thead>
+      <tbody>
+        {{#each dependentes}}
+          {{> dependenteDados}}
+        {{/each}}
+      </tbody>
+    </table>
+    <button class="btn btn-default cancel">Voltar</button>
+    {{/with}}
+  </div>
+</template>
+
+<template name="dependenteDados">
+  <tr>
+      <td>{{nome}}</td>
+      <td>{{cpf}}</td>
+      <td>{{dataNasc}}</td>
+    <td><a href="#" class="deletar">Deletar</a></td> 
+    <td><a href="#" class="editar">Editar</a></td>
+  </tr>
+</template>

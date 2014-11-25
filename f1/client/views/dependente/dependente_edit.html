@@ -1,0 +1,45 @@
+<template name="dependenteEdit">
+    <div class="container">
+   {{#with dependente}}
+    <h2>Editar dependente</h2>
+      <form class="form-horizontal" role="form">
+
+            <div class="form-group">
+
+              <label for="inputnome" class="col-sm-2 control-label">Nome</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="nome" id="inputnome" value="{{nome}}">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputnome" class="col-sm-2 control-label">Cpf</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="cpf" id="inputCpf" value="{{cpf}}" data-vm-mask-cpf>
+              </div>
+            </div>  
+            
+            <div class="form-group">
+              <label for="inputdataNasc" class="col-sm-2 control-label">Data de nascimento</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="dataNasc" id="inputdataNasc" value="{{dataNasc}}" data-vm-mask-date>
+              </div>
+            </div>  
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Salvar dependente</button>
+            <button class="btn btn-default cancel">Voltar</button>
+          </div>
+      </div>
+      </form>
+  {{else}}
+        <div class="form-group">
+          <h3>Não há dependente com esse ID.</h3>
+          <hr>
+          <button class="btn btn-default cancel">Voltar para lista de dependentes</button>
+        </div>
+ {{/with}}
+      
+    </div>
+</template>
